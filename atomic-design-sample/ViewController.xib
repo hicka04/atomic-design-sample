@@ -20,27 +20,68 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1X4-ZQ-loz" customClass="Button" customModule="design_parts">
-                    <rect key="frame" x="136.5" y="309.5" width="102.5" height="48"/>
-                    <state key="normal" title="Buttonn"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="style" value="border"/>
-                    </userDefinedRuntimeAttributes>
-                </button>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PdH-4l-lNI">
-                    <rect key="frame" x="127" y="367.5" width="121" height="29"/>
-                    <segments>
-                        <segment title="First"/>
-                        <segment title="Second"/>
-                    </segments>
-                </segmentedControl>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tel-eN-NYa">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="I0F-65-q3y">
+                            <rect key="frame" x="8" y="0.0" width="359" height="486.5"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D7b-br-cN0" customClass="ExpandTextView" customModule="design_parts">
+                                    <rect key="frame" x="0.0" y="0.0" width="359" height="280"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="minimumRows">
+                                            <integer key="value" value="0"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LNi-CK-G0E" customClass="ExpandTextView" customModule="design_parts">
+                                    <rect key="frame" x="0.0" y="288" width="359" height="61"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="defaultText" value="日本語入れてみるおおおおおおおおおおおおおおおおおおおおお"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="minimumRows">
+                                            <integer key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QGr-Ba-pY9" customClass="ExpandTextView" customModule="design_parts">
+                                    <rect key="frame" x="0.0" y="357" width="359" height="60.5"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="minimumRows">
+                                            <integer key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="defaultText" value="hoge"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TmC-vp-tmq" customClass="ExpandTextView" customModule="design_parts">
+                                    <rect key="frame" x="0.0" y="425.5" width="359" height="61"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="minimumRows">
+                                            <integer key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="I0F-65-q3y" firstAttribute="leading" secondItem="Tel-eN-NYa" secondAttribute="leading" constant="8" id="E7a-xE-qWS"/>
+                        <constraint firstItem="I0F-65-q3y" firstAttribute="top" secondItem="Tel-eN-NYa" secondAttribute="top" id="MJW-rh-8gi"/>
+                        <constraint firstAttribute="trailing" secondItem="I0F-65-q3y" secondAttribute="trailing" constant="8" id="Vuc-FY-V5W"/>
+                        <constraint firstAttribute="bottom" secondItem="I0F-65-q3y" secondAttribute="bottom" id="WNQ-g2-eQA"/>
+                        <constraint firstItem="I0F-65-q3y" firstAttribute="width" secondItem="Tel-eN-NYa" secondAttribute="width" constant="-16" id="bV9-Ia-u7u"/>
+                    </constraints>
+                </scrollView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="PdH-4l-lNI" firstAttribute="top" secondItem="1X4-ZQ-loz" secondAttribute="bottom" constant="10" id="6YE-UC-LZu"/>
-                <constraint firstItem="1X4-ZQ-loz" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Ix9-jt-Ai8"/>
-                <constraint firstItem="PdH-4l-lNI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Pcc-c7-smu"/>
-                <constraint firstItem="1X4-ZQ-loz" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="hIz-1d-URf"/>
+                <constraint firstItem="Tel-eN-NYa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Ngc-SA-LP9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Tel-eN-NYa" secondAttribute="trailing" id="Qyc-XB-BNr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Tel-eN-NYa" secondAttribute="bottom" id="TRR-8t-b2i"/>
+                <constraint firstItem="Tel-eN-NYa" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Z4f-5Y-PkC"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
